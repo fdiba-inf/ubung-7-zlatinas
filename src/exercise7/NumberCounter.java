@@ -19,12 +19,21 @@ public class NumberCounter {
         System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int numberOccurrences = 0; // Call method
+        int numberOccurrences = 0; 
+        int check = countNumberOccurrences(number, numbers, numberOccurrences); 
+          numberOccurrences = check; 
+        // Call method
         System.out.println("Number occurrences: " + numberOccurrences);
     }
 
-    public static int countNumberOccurrences(int number, int[] numbers) {
+    public static int countNumberOccurrences(int number, int[] numbers, int count) {
+        for (int i = 0; i < numbers.length; i ++ ){
+          if (numbers[i] == number) {
+             count ++; 
+          }
+        
+        }
         // Implement method
-        return 0;
+        return count;
     }
 }
